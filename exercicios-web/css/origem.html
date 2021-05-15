@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Origem CSS: Externo, Interno e Inline</title>
+    <style>
+        body {
+            background-color: aquamarine;
+        }
+    </style>
+    <link rel="stylesheet" href="css/externo.css">
+</head>
+
+<body style="background-color: coral;">
+    <h1>E agora?</h1>
+</body>
+
+</html>
+<!--
+    Prioridade do CSS para folhas externas ao html e a tag style no head 
+    é de acordo com a ordem de processamento: os últimos que forem processados
+    sobrescrevem os outros.
+    Agora, quando se trata de estilo inline (atributo style da tag html), ele 
+    sempre sobresescreve os outros, independente da ordem.
+-->

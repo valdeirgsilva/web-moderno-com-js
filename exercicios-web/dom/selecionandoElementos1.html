@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Selecionar Elementos #01</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="conteudo exercicio">
+    <div id="primeiro">#primeiro</div>
+    <div>Segundo</div>
+    <div class="terceiro ultimo">.terceiro .ultimo</div>
+    <script>              
+        document.getElementById('primeiro').classList.add('destaque');
+    
+        const divs = document.getElementsByTagName('div'); //HTMLCollection
+        Array.from(divs).forEach(e => e.classList.remove('destaque'));
+
+        const divsArray = [...divs];
+        divsArray.forEach(e => e.classList.add('destaque'));
+
+        // Transformar o HTMLCollection em um array, fazendo uso de Array.from() ou o operador 'spread (...)' 
+        // dentro de um array, é uma forma de conseguir mais flexibilidade em sua manipulação.
+        // Pois algumas funcionalidades interessantes para tal (forEach, reduce, map, filter), não são suportadas 
+        // pelo HTMLCollection. 
+ 
+        const ultimosElementos = document.getElementsByClassName('ultimo'); //HTMLCollection == tipo de interator.
+        for(let e of ultimosElementos)
+            e.classList.remove('destaque');
+    </script>
+</body>
+</html>
